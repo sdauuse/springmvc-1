@@ -11,6 +11,8 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <a href="${pageContext.request.contextPath}/show.action">点击跳转1</a>
+  <br>
+  <a href="${pageContext.request.contextPath}/show2.action">点击跳转2</a>
   </body>
 </html>
