@@ -18,4 +18,14 @@
 
     <!--扫描spring注解，使其生效-->
     <context:component-scan base-package="com.miao.springmvc"></context:component-scan>
+
+    <bean id="dataConvert" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="com.miao.springmvc.convert.DataConvert"></bean>
+            </list>
+        </property>
+    </bean>
+    <!--注解驱动，如何理解，比如我们在用鼠标之前，需要安装鼠标驱动，安装驱动后才可以正常使用鼠标功能-->
+    <mvc:annotation-driven conversion-service="dataConvert"></mvc:annotation-driven>
 </beans>
