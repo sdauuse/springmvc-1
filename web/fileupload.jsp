@@ -11,6 +11,10 @@
     <title>Title</title>
 </head>
 <body>
+<a href="${pageContext.request.contextPath}/download/111.png">111.png图片下载</a>
+<a href="${pageContext.request.contextPath}/download/222.png">222.png图片下载</a>
+
+<hr>
 <form action="${pageContext.request.contextPath}/upload" method="post" enctype="multipart/form-data">
     <input type="file" name="file"><br>
     <input type="submit" value="上传文件">
