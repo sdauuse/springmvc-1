@@ -28,4 +28,22 @@
     </bean>
     <!--注解驱动，如何理解，比如我们在用鼠标之前，需要安装鼠标驱动，安装驱动后才可以正常使用鼠标功能-->
     <mvc:annotation-driven conversion-service="dataConvert"></mvc:annotation-driven>
+    <!--访问path的时候，没有找到对应的mapping，就跳转的到view-name-->
+    <mvc:view-controller path="testView" view-name="/result3.jsp"/>
+    <mvc:annotation-driven></mvc:annotation-driven>   <!-- 此注解与<mvc:....>注解配合使用，如果用了<mvc:.......>不用此注解会导致controller层的@requestMapping映射失效-->
+
+    <!--web.xml <url-pattern>/</url-pattern>时访问静态资源-->
+<!--    <mvc:default-servlet-handler></mvc:default-servlet-handler>-->
+
+    <!-- 此注解功能与<mvc:default-servlet-handler></mvc:default-servlet-handler>相同-->
+    <mvc:resources location="/img/" mapping="/img/**"/>
+    <mvc:resources location="/js/" mapping="/js/**"/>
+    <mvc:resources location="/css/" mapping="/css/**"/>
+
+
+    <!--springmvc上传文件的配置-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"></property>
+        <property name="maxUploadSize" value="102400"></property>
+    </bean>
 </beans>

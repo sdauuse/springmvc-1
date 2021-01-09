@@ -28,5 +28,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.51" level="application_server_libraries" />
     <orderEntry type="library" name="springmvc" level="project" />
+    <orderEntry type="library" name="lombok" level="project" />
+    <orderEntry type="library" name="hibernate-validator-5" level="project" />
+    <orderEntry type="library" name="jackson-annotations-2.9.4" level="project" />
+    <orderEntry type="library" name="com.springsource.org.apache.commons.logging-1.1.1" level="project" />
   </component>
 </module>

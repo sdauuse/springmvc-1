@@ -1,5 +1,8 @@
 package com.miao.springmvc.domain;
 
+import org.hibernate.validator.constraints.NotBlank;
+
+import javax.validation.constraints.Max;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,7 +13,9 @@ import java.util.List;
  */
 
 public class User {
+    @NotBlank(message = "用户名不能为空")
     private String userName;
+    @Max(value = 200,message = "年龄应该小于200")
     private Integer userAge;
     private String[] hobby;
     private Pet pet;
